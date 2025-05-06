@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">
+                I am a child element
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.child').addEventListener("click", () => {
+
+            document.querySelector(".child").innerHTML = `<b> You have clicked button </b>`;
+        })
+        let a = setInterval(()=>{
+            document.querySelector(".childContainer").style.background = "red";
+       
+        },1000
+    );
+    console.log(a)
+    // clearInterval(1)
+    </script>
+</body>
+
+</html>
